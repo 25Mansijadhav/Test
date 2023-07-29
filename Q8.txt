@@ -1,0 +1,13 @@
+output:
+1
+4
+3
+2
+
+explanation
+The numbers 1, 4, 3, and 2 will be logged to the console in the following order:
+
+1 console.log(1); will be executed first, so 1 will be logged to the console.
+2 setTimeout(function(){console.log(2)}, 1000); schedules the logging of 2 after a delay of 1000 milliseconds (1 second). However, this          doesn't block the execution of the next statements.
+3 setTimeout(function(){console.log(3)}, 0); also schedules the logging of 3 after a delay of 0 milliseconds. Although it's set to 0, it's still handled asynchronously, so it will be executed after the current synchronous code completes.
+4  console.log(4); will be executed after the first console.log(1);, so 4 will be logged to the console.

@@ -1,0 +1,14 @@
+Output:
+1
+4
+2
+3
+
+explanation:
+1 console.log(1);: This line logs 1 to the console.
+
+2  setTimeout(printNumber, 0, 2);: This line schedules the execution of the printNumber function with the argument 2 after a delay of 0 milliseconds. The delay of 0 milliseconds means that the printNumber function will be added to the event queue immediately, but it won't be executed immediately. It will wait for the current synchronous code block to finish.
+
+ 3  setTimeout(printNumber, 100, 3);: This line schedules the execution of the printNumber function with the argument 3 after a delay of 100 milliseconds. Since this has a delay, it will be placed after the previous task in the event queue.
+
+4  console.log(4);: This line logs 4 to the console.
