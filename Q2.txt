@@ -1,0 +1,9 @@
+5
+5
+5
+5
+5
+The loop starts with i = 0.
+It schedules a setTimeout function with a callback that logs the value of i to the console after 100 milliseconds.
+The loop continues, and i is incremented to 1, then schedules another setTimeout with the same callback function.
+The loop continues in the same manner until i reaches 4.
