@@ -1,0 +1,17 @@
+Code:
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers.reduce((acc, num) => {
+  if (num % 2 === 0) {
+    acc.evens.push(num);
+  } else {
+    acc.odds.push(num);
+  }
+  return acc;
+}, { evens: [], odds: [] });
+
+Explanation:
+The code provided has a small issue. Since the reduce() function doesn't have an initial value specified, it will use the first element of the array (1 in this case) as the initial value for the acc (accumulator). However, this causes a problem because acc is expected to be an object with properties evens and odds. But, since the initial value is 1, it will not have those properties.
+
+To fix this, we can provide an initial value to the reduce() function, which should be an object with evens and odds properties set to empty arrays.
+
